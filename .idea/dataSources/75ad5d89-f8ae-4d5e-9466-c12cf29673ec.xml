@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="boutique@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="boutique">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="android_db"/>
+    <schema id="6" parent="1" name="banquebd"/>
+    <schema id="7" parent="1" name="bdetud"/>
+    <schema id="8" parent="1" name="bdposter"/>
+    <schema id="9" parent="1" name="camp"/>
+    <schema id="10" parent="1" name="clando+"/>
+    <schema id="11" parent="1" name="etudian_bd"/>
+    <schema id="12" parent="1" name="logement"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="phpmyadmin"/>
+    <schema id="15" parent="1" name="test"/>
+    <schema id="16" parent="1" name="tourisme"/>
+    <table id="17" parent="2" name="categorie"/>
+    <table id="18" parent="2" name="produit"/>
+    <column id="19" parent="17" name="idCategorie">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="20" parent="17" name="Nomphoto">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="21" parent="17" name="description">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="22" parent="17" name="nom_cat">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="23" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idCategorie</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="24" parent="18" name="idProduit">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="18" name="description">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="26" parent="18" name="designation">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="18" name="photo">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="28" parent="18" name="prix">
+      <Position>5</Position>
+      <DataType>double|0</DataType>
+    </column>
+    <column id="29" parent="18" name="quantite">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="30" parent="18" name="ID_CAT">
+      <Position>7</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="31" parent="18" name="FK_4yoobnuh6ram3ewgjaibi0q8t">
+      <ColNames>ID_CAT</ColNames>
+    </index>
+    <key id="32" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>idProduit</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="33" parent="18" name="FK_4yoobnuh6ram3ewgjaibi0q8t">
+      <ColNames>ID_CAT</ColNames>
+      <RefSchemaName>boutique</RefSchemaName>
+      <RefTableName>categorie</RefTableName>
+      <RefColNames>idCategorie</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
